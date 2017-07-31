@@ -45,9 +45,10 @@ for (var i = 0; i < 20; i++) {
 
 // change color of the square on click
 $body.on("mouseover", function(event){
-  $(".square").css("background-size", "cover")
   if (event.target.className == "square") {
     event.target.style.background = currentColor
+    $(".square").css("background-size", "cover")
+
   }
 })
 
