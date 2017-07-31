@@ -28,6 +28,8 @@ $("#set-stemp").on("click", function(event) {
   $.ajax(setting).done(function(movie) {
     $(".brush").css("background", 'url(' + movie.Poster + ')');
     currentColor = "url(" + movie.Poster + ")"
+    $(".brush").css("background-size", "cover")
+    $(".square").css("background-size", "cover")
   })
 })
 
@@ -43,6 +45,7 @@ for (var i = 0; i < 20; i++) {
 
 // change color of the square on click
 $body.on("mouseover", function(event){
+  $(".square").css("background-size", "cover")
   if (event.target.className == "square") {
     event.target.style.background = currentColor
   }
