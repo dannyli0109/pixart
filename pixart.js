@@ -12,5 +12,13 @@ for (var i = 0; i < 20; i++) {
   $body.append($("<div class='brush'>"))
 }
 
+// change color of the square on click
+$body.on("click", function(event){
+  if (event.target.className == "brush") {
+    event.target.style.background = "green"
+
+  }
+})
+
 
 // enter key will work as well
