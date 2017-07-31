@@ -9,6 +9,34 @@ $("#set-color").on("click", function(event){
   currentColor = $colorInput.val()
 })
 
+// change stemp
+$("#set-stemp").on("click", function(event) {
+  event.preventDefault()
+
+  var baseUrl = 'http://omdbapi.com/'
+  var searchString = $('#stemp-field').val()
+  var apiKey = "2f6435d9"
+  var setting = {
+    url: baseUrl,
+    data: {
+      t: searchString,
+      apiKey: apiKey
+    }
+  }
+
+
+  $.ajax(setting).done(function(movie) {
+    debugger
+    $(".brush").css("background", 'url(' + movie.Poster + ')');
+    currentColor = "url(" + movie.Poster + ")"
+  })
+})
+
+
+
+
+
+
 // create squares
 for (var i = 0; i < 20; i++) {
   $body.append($("<div class='square'>"))
