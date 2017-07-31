@@ -26,7 +26,6 @@ $("#set-stemp").on("click", function(event) {
 
 
   $.ajax(setting).done(function(movie) {
-    debugger
     $(".brush").css("background", 'url(' + movie.Poster + ')');
     currentColor = "url(" + movie.Poster + ")"
   })
