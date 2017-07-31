@@ -15,10 +15,11 @@ for (var i = 0; i < 20; i++) {
 // change color of the square on click
 $body.on("click", function(event){
   if (event.target.className == "brush") {
-    event.target.style.background = "green"
-
+    event.target.style.background = $colorInput.val()
   }
 })
+
+
 
 
 // enter key will work as well
